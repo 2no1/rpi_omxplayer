@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+try:
+	import tkinter as tk
+except:
+	system('sudo apt-get -y install python-tk')
+	raise
+
+from tkinter import filedialog
+from os import system
+from sys import exit
+from time import sleep
+
+def nosub():
+	root = tk.Tk()
+	root.withdraw()
+	file = filedialog.askopenfilename()
+	system('omxplayer -p -o hdmi %(file)s' % locals())
+	exit()
+
+def csub():
+	root=tk.Tk()
+	root.withdraw()
+	file = filedialog.askopenfilename()
+	sub = filedialog.askopenfilename()
+	system('omxplayer -p -o hdmi %(file)s --subtitles %(sub)s' % locals())
+	exit()
+
+def menu():
+	print('1. Video with subs (first vid and subs after)')
+	print('2. Video with no subs')
+
+system('clear')
+
+loop = True
+
+while loop:
+	menu()
+	op = input('Choose: ')
+	if op == '1':
+		csub()
+	elif op == '2':
+		nosub()
+	else:
+		print('Invalid, aborting...')
+		sleep(2)
+		exit()
