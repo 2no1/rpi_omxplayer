@@ -3,6 +3,6 @@ Python script to make omxplayer a litle easier
 
 # USAGE:
 
-sudo chmod +x omxplayer
+>sudo chmod +x omxplayer
 
-./omxplayer
+>./omxplayer
