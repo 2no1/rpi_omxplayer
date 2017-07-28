@@ -1,7 +1,8 @@
 # rpi_omxplayer
 Python script to make omxplayer a litle easier
 
->USAGE:
+# USAGE:
 
-> sudo chmod +x omxplayer
-> ./omxplayer
+sudo chmod +x omxplayer
+
+./omxplayer
